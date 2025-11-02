@@ -25,8 +25,8 @@ public class Coche extends Vehiculo {
         this.velocidadActual += incremento;
 
 
-        System.out.println("El Coche " + getModelo() + "año" + getAnio() + "color" + getColor() +
-                "acelero y ahora va a " + this.velocidadActual + " km/h.");
+        System.out.println("El Coche " + getModelo() + ", año " + getAnio() + ", color " + getColor() +
+                " acelero y ahora va a " + this.velocidadActual + " km/h.");
     }
 
     // Métodos propios del coche
@@ -38,5 +38,9 @@ public class Coche extends Vehiculo {
 
     public void abrirPuerta() {
         System.out.println("Puerta abierta. Este coche tiene " + this.numPuertas + " puertas.");
+    }
+
+    public void prendeClima(){
+        System.out.println("El auto " + getModelo() + " prendió el clima");
     }
 }
