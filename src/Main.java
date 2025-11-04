@@ -21,11 +21,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Main {
 
     public static void main(String[] args) {
 
-        // CREACIÓN DE OBJETOS: Instanciando las clases hijas
+        // CREACIÓN DE OBJETOS: Instancia de las clases hijas
 
         // Coche usa el constructor de Coche
         Coche miCoche = new Coche("Tesla Model 3", 2024, "Rojo", 4);
@@ -33,30 +34,31 @@ public class Main {
         // Motocicleta usa el constructor de Motocicleta
         Motocicleta miMoto = new Motocicleta("Yamaha YZF-R6", 2023, "Azul", 600);
 
-        System.out.println("Prueba de Clases Individuales");
+        System.out.println("\nPrueba de Clases Individuales \n");
 
         // Prueba de Encapsulamiento y Métodos propios
         System.out.println("Información del coche: " + miCoche.getModelo() + " " + miCoche.getAnio() + " " + miCoche.getColor()); // Uso del Getter (Encapsulamiento)
         System.out.println("Modelo de la moto: " + miMoto.getModelo() + " " + miMoto.getAnio() + " " + miMoto.getColor()); // Uso del Getter (Encapsulamiento)
         miCoche.setColor("Negro Mate"); // Uso del Setter
         miMoto.setColor("Verde"); // Uso del Setter
-        miCoche.prendeClima(); //Método único dal Coche
+        miCoche.prendeClima(); //M3todo único dal Coche
         miMoto.hacerCaballito(); // Método único de Motocicleta
+
 
         System.out.println("------------------------------------");
 
-        // POLIMORFISMO: Crear una lista de tipo Padre (Vehiculo)
-        // La lista puede contener cualquier clase que herede de Vehiculo.
+        // POLIMORFISMO: Crear una lista de tipo Padre (Véhiculo)
+        // La lista puede contener cualquier clase que herede de Véhiculo.
         List<Vehiculo> listaVehiculos = new ArrayList<>();
         listaVehiculos.add(miCoche); // Un Coche es un Vehiculo
         listaVehiculos.add(miMoto);  // Una Motocicleta es un Vehiculo
 
-        System.out.println("Demostración de Polimorfismo");
+        System.out.println("Demostración de Polimorfismo \n");
 
         // ITERACIÓN: Ejecutando el mismo método en diferentes objetos
         for (Vehiculo vehiculo : listaVehiculos) {
 
-            // Java llama automáticamente al método 'encender()' definido en Vehiculo (Herencia)
+            // Java llama automáticamente al método 'encender()' definido en Véhiculo (Herencia)
             vehiculo.encender();
 
 

@@ -4,11 +4,11 @@ public class Coche extends Vehiculo {
     private int numPuertas;
 
     // CONSTRUCTOR (Llamada al Padre, inicializamos el objeto)
-    // Un Coche necesita todos los datos de un Vehiculo MÁS su propio dato (numPuertas).
+    // Un Coche necesita todos los datos de un Véhiculo más su propio dato (numPuertas).
     public Coche(String modelo, int anio, String color, int numPuertas) {
 
         // El constructor de la clase hija DEBE llamar primero al constructor del Padre.
-        // La palabra clave 'super()' invoca el constructor de Vehiculo.
+        // La palabra clave 'super()' invoca el constructor de Véhiculo.
         super(modelo, anio, color);
 
         // Inicialización de atributos propios del Coche
@@ -21,7 +21,7 @@ public class Coche extends Vehiculo {
     @Override
     public void acelerar(int incremento) {
 
-        // Accedemos a la variable 'velocidadActual' porque es 'protected' en Vehiculo.
+        // Accedemos a la variable 'velocidadActual' porque es 'protected' en Véhiculo.
         this.velocidadActual += incremento;
 
 
