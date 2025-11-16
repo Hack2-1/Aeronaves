@@ -69,21 +69,21 @@ public class Main {
 
             // Java llama automáticamente al método 'acelerar()' específico de cada objeto:
             // Si es Coche o Moto, usa la lógica de aceleración de Coche.
-            vehiculo.acelerar(15);
+            vehiculo.acelerar(60);
 
 
 
             System.out.println("------------------------------------");
         }
 
-        for (Vehiculo vehiculo : listaVehiculos) {
+        for (Vehiculo vehiculo  : listaVehiculos) {
             vehiculo.apagar();
             System.out.println("------------------------------------");
         }
 
         // PRUEBA ADICIONAL: Ejecución de la lógica de negocio
         miMoto.acelerar(30); // Muestra la aceleración de la moto (con el factor de cilindrada)
-        miCoche.acelerar(50); // Muestra la aceleración del coche (con su propia lógica)
+        miCoche.acelerar(70); // Muestra la aceleración del coche (con su propia lógica)
 
     }
 }
